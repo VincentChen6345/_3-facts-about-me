@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%; }
+
+.container {
+  background-image: linear-gradient(to bottom right, lightblue, lightgreen);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content max-content max-content;
+  justify-content: center;
+  position: relative;
+  row-gap: 2rem;
+  column-gap: 2rem; }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.555);
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.btn {
+  justify-self: center;
+  font-size: 2rem;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  margin-top: 10%;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.274); }
+  .btn:focus {
+    outline: none; }
+  .btn-1:hover {
+    background-color: lightyellow; }
+  .btn-2:hover {
+    background-color: lightyellow; }
+  .btn-3:hover {
+    background-color: lightyellow; }
+
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  height: 30rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.274); }
+  .modal-heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem; }
+  .modal-paragraph {
+    font-size: 2rem; }
+  .modal-1 {
+    z-index: 10; }
+  .modal-2 {
+    z-index: 10; }
+  .modal-3 {
+    z-index: 10; }
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: #ff7575;
+  border: none;
+  font-size: 3rem;
+  border-radius: 50px;
+  padding: 0 0.8rem; }
+  .close-modal:hover {
+    background-color: #fcb5b5; }
+
+.hidden {
+  display: none; }
+
+.primary-heading {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  font-size: 5rem;
+  justify-self: center;
+  margin-bottom: 5%;
+  margin-top: 5%; }
+
+.photo {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  justify-self: center;
+  border-radius: 50%;
+  width: 20%; }
