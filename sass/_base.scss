@@ -1,3 +1,8 @@
+//responsive breakpoints
+$bp-largest: 35em; //550px/16px=35em;
+$bp-medium: 29em; //450px/16px=29em
+$bp-small: 22em; //350px/16px=22em
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,6 +25,14 @@ html {
   position: relative;
   row-gap: 2rem;
   column-gap: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: min-content max-content max-content repeat(
+        2,
+        max-content
+      );
+    grid-template-columns: 1fr;
+  }
 }
 .overlay {
   background-color: rgba(0, 0, 0, 0.555);

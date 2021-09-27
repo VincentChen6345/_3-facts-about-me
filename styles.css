@@ -17,6 +17,10 @@ html {
   position: relative;
   row-gap: 2rem;
   column-gap: 2rem; }
+  @media only screen and (max-width: 29em) {
+    .container {
+      grid-template-rows: min-content max-content max-content repeat(2, max-content);
+      grid-template-columns: 1fr; } }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.555);
@@ -35,6 +39,9 @@ html {
   border-radius: 50px;
   margin-top: 10%;
   box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.274); }
+  @media only screen and (max-width: 29em) {
+    .btn {
+      margin-top: 5%; } }
   .btn:focus {
     outline: none; }
   .btn-1:hover {
@@ -58,12 +65,22 @@ html {
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.274); }
+  @media only screen and (max-width: 35em) {
+    .modal {
+      width: 90vw;
+      height: min-content; } }
   .modal-heading {
     text-align: center;
     font-size: 4rem;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 29em) {
+      .modal-heading {
+        font-size: 3rem; } }
   .modal-paragraph {
     font-size: 2rem; }
+    @media only screen and (max-width: 29em) {
+      .modal-paragraph {
+        font-size: 1.8rem; } }
   .modal-1 {
     z-index: 10; }
   .modal-2 {
@@ -93,6 +110,12 @@ html {
   justify-self: center;
   margin-bottom: 5%;
   margin-top: 5%; }
+  @media only screen and (max-width: 35em) {
+    .primary-heading {
+      font-size: 4rem; } }
+  @media only screen and (max-width: 22em) {
+    .primary-heading {
+      font-size: 3rem; } }
 
 .photo {
   grid-column: 1/-1;
@@ -100,3 +123,9 @@ html {
   justify-self: center;
   border-radius: 50%;
   width: 20%; }
+  @media only screen and (max-width: 29em) {
+    .photo {
+      width: 30%; } }
+  @media only screen and (max-width: 22em) {
+    .photo {
+      width: 40%; } }
